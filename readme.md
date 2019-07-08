@@ -2,21 +2,20 @@
 
 ## What is Nouveau?
 
-`Nouveau - the open source project is reverse engineering NVIDIA by X.Org in linux system`
+Nouveau - the open source project is reverse engineering NVIDIA by X.Org in linux system
 
 ## Step by step
 
 - Conventions
 ```
-$ => require 'regular user'
-# => require 'root user'
-> => edit in file with your favorite editor
+$ = require 'regular user'
+# = require 'root user'
+> = text in file for edit with your favorite editor
 ```
 
 - Login with the superuser via sudo
 ```
 $   sudo -i
-#   whoami
 ```
 
 - Add new apt source list non-free and update
@@ -41,15 +40,19 @@ $   sudo -i
 ```
 #   apt install nvidia-driver
 ```
+**OR**
+```
+#   apt install nvidia-legacy-390xx-driver
+```
 
-- Disable default nouveau to the blacklist
+- Disable default nouveau
 ```
 #   nano /etc/modprobe.d/blacklist.conf
     >   blacklist nouveau
     >   options nouveau modeset=0
 ```
 
-- Update initial ramfs
+- Update initial ramfs after add nouveau to the blacklist
 ```
 #   update-initramfs -u
 ```
