@@ -72,6 +72,11 @@ $   sudo -i
 #   apt install linux-headers-$(uname -r) build-essential
 ```
 
+- Install wget for download your nvidia driver
+```
+#   apt install wget
+```
+
 - Run command for **Install NVIDIA Official With Root** on sh/bash. *Example: NVIDIA-Linux-x86_64-390.116.run*
 ```
 #   sh ./NVIDIA-Linux-x86_64-390.116.run
